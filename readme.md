@@ -16,10 +16,9 @@ Database use SQL Server
 Step-by-step instructions on how to install and set up the project.
 
 ```shell
-git clone <repository-url>
+git clone https://github.com/sambernyowodev/Booking.git
 cd <project-directory>
 npm install
 
-### Start Server
-
+# Start Server
 node server.js

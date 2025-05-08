@@ -21,4 +21,4 @@ cd <project-directory>
 npm install
 
 # Start Server
-node server.js
+node index.js

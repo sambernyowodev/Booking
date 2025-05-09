@@ -1,16 +1,21 @@
 const crypto = require("crypto");
 const db = require("../config/db");
+const userDTO = require("../dto/userDto");
 
 async function getUserByUsername(userName) {
   return await db.Users.findOne({ where: { UserName: userName } });
 }
 
 async function getAll() {
-  return await db.Users.findAll();
+  const users = await db.Users.findAll();
+  // Create DTO instances for each user
+  return users.map(user => new userDTO(user.Id, user.UserName, user.Email, user.FirstName, user.LastName));
 }
 
 async function getUserById(id) {
-  return await db.Users.findByPk(id);
+  const user =  await db.Users.findByPk(id);
+  // Create a DTO instance
+  return new userDTO(user.Id, user.UserName, user.Email, user.FirstName, user.LastName);
 }
 
 async function createUser(userData, hashedPassword) {
@@ -25,7 +30,9 @@ async function createUser(userData, hashedPassword) {
     createdAt: new Date(),
     updatedAt: new Date(),
   });
-  return newUser;
+
+  // Create a DTO instance
+  return new userDTO(newUser.Id, newUser.UserName, newUser.Email, newUser.FirstName, newUser.LastName);
 }
 
 async function updateUser(id, userData) {
@@ -44,7 +51,8 @@ async function updateUser(id, userData) {
       },
     }
   );
-  return { id, userName, email, firstName, lastName };
+
+  return getUserById(id);
 }
 
 async function deleteUser(id) {

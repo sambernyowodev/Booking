@@ -77,7 +77,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZTg4NjFlNy0zZDExLTRhYWQtYWIxYy01Y2M4NDFhZDcyMzAiLCJpYXQiOjE3NDY3NzA5MDMsImV4cCI6MTc0Njc3NDUwM30.0dpHGwwnhPdP4F-Qn4ES4vOYkZGfrkgWJbhPCn6dyy8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDY4MDQyNDYsImV4cCI6MTc0NjgwNzg0Nn0.U0a6porB_TfUpLl4PwB7-g2lfJXmOnGydIES4GL5npM",
 								"type": "text"
 							}
 						],
@@ -102,12 +102,12 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZTg4NjFlNy0zZDExLTRhYWQtYWIxYy01Y2M4NDFhZDcyMzAiLCJpYXQiOjE3NDY3NzA5MDMsImV4cCI6MTc0Njc3NDUwM30.0dpHGwwnhPdP4F-Qn4ES4vOYkZGfrkgWJbhPCn6dyy8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDY4MDQyNDYsImV4cCI6MTc0NjgwNzg0Nn0.U0a6porB_TfUpLl4PwB7-g2lfJXmOnGydIES4GL5npM",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{localURL}}/api/v1/getUserById?id=1e8861e7-3d11-4aad-ab1c-5cc841ad7230",
+							"raw": "{{localURL}}/api/v1/getUserById?id=f14f1257-f636-4780-a5c5-131391f4222d",
 							"host": [
 								"{{localURL}}"
 							],
@@ -119,7 +119,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "1e8861e7-3d11-4aad-ab1c-5cc841ad7230"
+									"value": "f14f1257-f636-4780-a5c5-131391f4222d"
 								}
 							]
 						}
@@ -164,13 +164,13 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZTg4NjFlNy0zZDExLTRhYWQtYWIxYy01Y2M4NDFhZDcyMzAiLCJpYXQiOjE3NDY3NzA5MDMsImV4cCI6MTc0Njc3NDUwM30.0dpHGwwnhPdP4F-Qn4ES4vOYkZGfrkgWJbhPCn6dyy8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDY4MDQyNDYsImV4cCI6MTc0NjgwNzg0Nn0.U0a6porB_TfUpLl4PwB7-g2lfJXmOnGydIES4GL5npM",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userName\": \"Samber Nyowo\",\r\n    \"password\": \"Admin123\",\r\n    \"email\": \"sambernyowodev@gmail.com\",\r\n    \"firstName\" : \"Samber\",\r\n    \"lastName\" : \"Nyowos\"\r\n\r\n}",
+							"raw": "{\r\n    \"userName\": \"Samber Nyowo\",\r\n    \"email\": \"sambernyowodev@gmail.com\",\r\n    \"firstName\" : \"Samber\",\r\n    \"lastName\" : \"Nyowo\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -178,7 +178,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{localURL}}/api/v1/updateUser?id=1e8861e7-3d11-4aad-ab1c-5cc841ad7230",
+							"raw": "{{localURL}}/api/v1/updateUser?id=f14f1257-f636-4780-a5c5-131391f4222d",
 							"host": [
 								"{{localURL}}"
 							],
@@ -190,7 +190,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "1e8861e7-3d11-4aad-ab1c-5cc841ad7230"
+									"value": "f14f1257-f636-4780-a5c5-131391f4222d"
 								}
 							]
 						}

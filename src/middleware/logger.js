@@ -7,7 +7,8 @@ const logFormat = winston.format.combine(
   winston.format.align(),
   winston.format.printf(
    info => `${info.timestamp} ${info.level}: ${info.message}`,
- ),);
+ ),
+);
 
 const transport = new DailyRotateFile({
   filename: process.env.LOG_FOLDER + process.env.APP_NAME + "-%DATE%.log",

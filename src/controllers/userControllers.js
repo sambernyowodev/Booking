@@ -1,10 +1,9 @@
-const userModel = require("../models/userModel");
 const logger = require("../middleware/logger");
-const bcrypt = require("bcrypt");
+const userService = require("../services/userServices");
 
 async function getAllUsers(req, res) {
   try {
-    const users = await userModel.getAllUsers();
+    const users = await userService.getAll();
 
     // Check if users array is empty
     if (users.length === 0) {
@@ -22,12 +21,12 @@ async function getAllUsers(req, res) {
 
 async function getUserById(req, res) {
   try {
-    const user = await userModel.getUserById(req.params.id);
+    const user = await userService.getUserById(req.query.id);
     if (user) {
       logger.info("Retrieved user", { user });
       res.status(200).json(user);
     } else {
-      logger.warn("User not found", { id: req.params.id });
+      logger.warn("User not found", { id: req.query.id });
       res.status(404).json({ message: "User not found" });
     }
   } catch (err) {
@@ -38,14 +37,14 @@ async function getUserById(req, res) {
 
 async function updateUser(req, res) {
   try {
-    const updatedUser = await userModel.updateUser(req.params.id, req.body);
+    const updatedUser = await userService.updateUser(req.query.id, req.body);
     if (updatedUser) {
       logger.info("User updated successfully", { updatedUser });
       res
         .status(200)
         .json({ user: updatedUser, message: "User updated successfully" });
     } else {
-      logger.warn("User not found for update", { id: req.params.id });
+      logger.warn("User not found for update", { id: req.query.id });
       res.status(404).json({ message: "User not found" });
     }
   } catch (err) {
@@ -56,8 +55,8 @@ async function updateUser(req, res) {
 
 async function deleteUser(req, res) {
   try {
-    await userModel.deleteUser(req.params.id);
-    logger.info("User deleted successfully", { id: req.params.id });
+    await userService.deleteUser(req.query.id);
+    logger.info("User deleted successfully", { id: req.query.id });
     res.status(204).send(); // No content on successful deletion
   } catch (err) {
     logger.error("Failed to delete user", err);

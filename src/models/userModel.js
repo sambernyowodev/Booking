@@ -10,11 +10,11 @@ function model(sequelize) {
       autoIncrement: true,
       primaryKey: true,
     },
-    UserName: { type: DataTypes.STRING(250), allowNull: false},
+    UserName: { type: DataTypes.STRING(250), allowNull: false },
     Email: { type: DataTypes.STRING(250), allowNull: false },
     Password: { type: DataTypes.STRING(250), allowNull: false },
-    FirstName: { type: DataTypes.STRING(250), allowNull: true},
-    LastName: { type: DataTypes.STRING(250), allowNull: true},
+    FirstName: { type: DataTypes.STRING(250), allowNull: true },
+    LastName: { type: DataTypes.STRING(250), allowNull: true },
   };
 
   const options = {

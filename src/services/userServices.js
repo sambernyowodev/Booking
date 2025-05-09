@@ -1,32 +1,42 @@
 const db = require("../config/db");
 
 async function getUserByUsername(username) {
-    return await db.Users.findOne({ where: { UserName: username } });
+  return await db.Users.findOne({ where: { UserName: username } });
 }
 
 async function getAll() {
-    return await db.Users.findAll();
+  return await db.Users.findAll();
 }
 
 async function getUserById(id) {
-    return await db.Users.findByPk(id);
+  return await db.Users.findByPk(id);
 }
 
-async function createUser(UserName, Email, Password, FirstName, LastName) {
-    const newUsers = await db.Users.create({ UserName, Email, Password, FirstName, LastName, createdAt: new Date(), updatedAt: new Date() });
-  return newUsers;
+async function createUser(userData, hashedPassword) {
+  const { userName, email, firstName, lastName } = userData;
+  const newUser = await db.Users.create({
+    userName,
+    email,
+    hashedPassword,
+    firstName,
+    lastName,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  });
+  return newUser;
 }
 
-async function updateUser(id, UserName, Email, FirstName, LastName) {
-    await db.Users.update(
-      { UserName, Email, FirstName, LastName, updatedAt: new Date() },
-      {
-        where: {
-          Id: id,
-        },
-      }
-    );
-    return { Id, UserName, Email, FirstName, LastName };
+async function updateUser(id, userData) {
+  const { userName, email, firstName, lastName } = userData;
+  await db.Users.update(
+    { userName, email, firstName, lastName, updatedAt: new Date() },
+    {
+      where: {
+        Id: id,
+      },
+    }
+  );
+  return { id, userName, email, firstName, lastName };
 }
 
 async function deleteUser(id) {

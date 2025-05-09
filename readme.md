@@ -19,6 +19,9 @@ Step-by-step instructions on how to install and set up the project.
 git clone https://github.com/sambernyowodev/Booking.git
 cd <project-directory>
 npm install
+```
 
-# Start Server
+### Run
+```
 node index.js
+```

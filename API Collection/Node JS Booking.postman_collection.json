@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "d801cc41-f540-40de-a8c1-74c8a88dc381",
+		"name": "Node JS Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43197627"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Samber Nyowo\",\r\n    \"password\": \"Admin123\",\r\n    \"confirmPassword\" : \"Admin123\",\r\n    \"email\": \"sambernyowodev@gmail.com\",\r\n    \"firstName\" : \"Samber\",\r\n    \"lastName\" : \"Nyowo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/api/v1/signup",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Samber Nyowo\",\r\n    \"password\": \"Admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/api/v1/login",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GetAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZTg4NjFlNy0zZDExLTRhYWQtYWIxYy01Y2M4NDFhZDcyMzAiLCJpYXQiOjE3NDY3NzA5MDMsImV4cCI6MTc0Njc3NDUwM30.0dpHGwwnhPdP4F-Qn4ES4vOYkZGfrkgWJbhPCn6dyy8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/getAllUsers",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZTg4NjFlNy0zZDExLTRhYWQtYWIxYy01Y2M4NDFhZDcyMzAiLCJpYXQiOjE3NDY3NzA5MDMsImV4cCI6MTc0Njc3NDUwM30.0dpHGwwnhPdP4F-Qn4ES4vOYkZGfrkgWJbhPCn6dyy8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/getUserById?id=1e8861e7-3d11-4aad-ab1c-5cc841ad7230",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"getUserById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1e8861e7-3d11-4aad-ab1c-5cc841ad7230"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZTg4NjFlNy0zZDExLTRhYWQtYWIxYy01Y2M4NDFhZDcyMzAiLCJpYXQiOjE3NDY3NzA5MDMsImV4cCI6MTc0Njc3NDUwM30.0dpHGwwnhPdP4F-Qn4ES4vOYkZGfrkgWJbhPCn6dyy8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/deleteUser?id=1e8861e7-3d11-4aad-ab1c-5cc841ad7230",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"deleteUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1e8861e7-3d11-4aad-ab1c-5cc841ad7230"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZTg4NjFlNy0zZDExLTRhYWQtYWIxYy01Y2M4NDFhZDcyMzAiLCJpYXQiOjE3NDY3NzA5MDMsImV4cCI6MTc0Njc3NDUwM30.0dpHGwwnhPdP4F-Qn4ES4vOYkZGfrkgWJbhPCn6dyy8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Samber Nyowo\",\r\n    \"password\": \"Admin123\",\r\n    \"email\": \"sambernyowodev@gmail.com\",\r\n    \"firstName\" : \"Samber\",\r\n    \"lastName\" : \"Nyowos\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/api/v1/updateUser?id=1e8861e7-3d11-4aad-ab1c-5cc841ad7230",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"updateUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1e8861e7-3d11-4aad-ab1c-5cc841ad7230"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,7 +1,8 @@
+const crypto = require("crypto");
 const db = require("../config/db");
 
-async function getUserByUsername(username) {
-  return await db.Users.findOne({ where: { UserName: username } });
+async function getUserByUsername(userName) {
+  return await db.Users.findOne({ where: { UserName: userName } });
 }
 
 async function getAll() {
@@ -15,11 +16,12 @@ async function getUserById(id) {
 async function createUser(userData, hashedPassword) {
   const { userName, email, firstName, lastName } = userData;
   const newUser = await db.Users.create({
-    userName,
-    email,
-    hashedPassword,
-    firstName,
-    lastName,
+    Id: crypto.randomUUID(),
+    UserName: userName,
+    Email: email,
+    Password: hashedPassword,
+    FirstName: firstName,
+    LastName: lastName,
     createdAt: new Date(),
     updatedAt: new Date(),
   });
@@ -29,7 +31,13 @@ async function createUser(userData, hashedPassword) {
 async function updateUser(id, userData) {
   const { userName, email, firstName, lastName } = userData;
   await db.Users.update(
-    { userName, email, firstName, lastName, updatedAt: new Date() },
+    {
+      UserName: userName,
+      Email: email,
+      FirstName: firstName,
+      LastName: lastName,
+      updatedAt: new Date(),
+    },
     {
       where: {
         Id: id,

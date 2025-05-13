@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userName\": \"Samber Nyowo\",\r\n    \"password\": \"Admin123\",\r\n    \"confirmPassword\" : \"Admin123\",\r\n    \"email\": \"sambernyowodev@gmail.com\",\r\n    \"firstName\" : \"Samber\",\r\n    \"lastName\" : \"Nyowo\"\r\n}",
+							"raw": "{\r\n    \"userName\": \"Samber Nyowo\",\r\n    \"password\": \"Admin123\",\r\n    \"confirmPassword\" : \"Admin123\",\r\n    \"email\": \"sambernyowodev@gmail.com\",\r\n    \"firstName\" : \"Samber\",\r\n    \"lastName\" : \"Nyowo\",\r\n    \"userRoleId\" : \"7c6351ac-332d-4706-ad0d-5fa1390b0424\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -77,7 +77,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxMTQxNjgsImV4cCI6MTc0NzExNzc2OH0.KqW1tuWgQiZMCmspelMYCb8fCSRakmZXBZHEM000f5g",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxNDM3ODMsImV4cCI6MTc0NzE0NzM4M30.fDD96yi4aQH_RKWwkn-shRDJvgVAfB_1fl_xP1EsmLM",
 								"type": "text"
 							}
 						],
@@ -103,7 +103,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxMTQxNjgsImV4cCI6MTc0NzExNzc2OH0.KqW1tuWgQiZMCmspelMYCb8fCSRakmZXBZHEM000f5g",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxNDM3ODMsImV4cCI6MTc0NzE0NzM4M30.fDD96yi4aQH_RKWwkn-shRDJvgVAfB_1fl_xP1EsmLM",
 								"type": "text"
 							}
 						],
@@ -167,13 +167,13 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDY4MDQyNDYsImV4cCI6MTc0NjgwNzg0Nn0.U0a6porB_TfUpLl4PwB7-g2lfJXmOnGydIES4GL5npM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxNDM3ODMsImV4cCI6MTc0NzE0NzM4M30.fDD96yi4aQH_RKWwkn-shRDJvgVAfB_1fl_xP1EsmLM",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userName\": \"Samber Nyowo\",\r\n    \"email\": \"sambernyowodev@gmail.com\",\r\n    \"firstName\" : \"Samber\",\r\n    \"lastName\" : \"Nyowo\"\r\n\r\n}",
+							"raw": "{\r\n    \"userName\": \"Samber Nyowo\",\r\n    \"email\": \"sambernyowodev@gmail.com\",\r\n    \"firstName\" : \"Samber\",\r\n    \"lastName\" : \"Nyowo\",\r\n    \"userRoleId\" : \"7c6351ac-332d-4706-ad0d-5fa1390b0424\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

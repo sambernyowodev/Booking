@@ -9,6 +9,7 @@ function createUserSchema(req, res, next) {
     email: Joi.string().email().required(),
     password: Joi.string().min(6).required(),
     confirmPassword: Joi.string().valid(Joi.ref("password")).required(),
+    userRoleId: Joi.string(),
   });
   validateRequest(req, next, schema);
 }
@@ -19,6 +20,7 @@ function updateUserSchema(req, res, next) {
     firstName: Joi.string().empty(""),
     lastName: Joi.string().empty(""),
     email: Joi.string().email().empty(""),
+    userRoleId: Joi.string().empty(""),
   });
   validateRequest(req, next, schema);
 }

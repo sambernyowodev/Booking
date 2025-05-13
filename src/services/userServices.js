@@ -1,25 +1,51 @@
 const crypto = require("crypto");
 const db = require("../config/db");
 const userDTO = require("../dto/userDto");
+const userRoleDTO = require("../dto/userRoleDto");
 
 async function getUserByUsername(userName) {
   return await db.Users.findOne({ where: { UserName: userName } });
 }
 
 async function getAll() {
-  const users = await db.Users.findAll();
+  const users = await db.Users.findAll({ include: db.UserRoles });
   // Create DTO instances for each user
-  return users.map(user => new userDTO(user.Id, user.UserName, user.Email, user.FirstName, user.LastName));
+  return users.map(
+    (user) =>
+      new userDTO(
+        user.Id,
+        user.UserName,
+        user.Email,
+        user.FirstName,
+        user.LastName,
+        new userRoleDTO(
+          user.UserRole.Id,
+          user.UserRole.Name,
+          user.UserRole.Description
+        )
+      )
+  );
 }
 
 async function getUserById(id) {
-  const user =  await db.Users.findByPk(id);
+  const user = await db.Users.findByPk(id, { include: db.UserRoles });
   // Create a DTO instance
-  return new userDTO(user.Id, user.UserName, user.Email, user.FirstName, user.LastName);
+  return new userDTO(
+    user.Id,
+    user.UserName,
+    user.Email,
+    user.FirstName,
+    user.LastName,
+    new userRoleDTO(
+      user.UserRole.Id,
+      user.UserRole.Name,
+      user.UserRole.Description
+    )
+  );
 }
 
 async function createUser(userData, hashedPassword) {
-  const { userName, email, firstName, lastName } = userData;
+  const { userName, email, firstName, lastName, userRoleId } = userData;
   const newUser = await db.Users.create({
     Id: crypto.randomUUID(),
     UserName: userName,
@@ -27,6 +53,7 @@ async function createUser(userData, hashedPassword) {
     Password: hashedPassword,
     FirstName: firstName,
     LastName: lastName,
+    UserRoleId: userRoleId,
     createdAt: new Date(),
     updatedAt: new Date(),
   });
@@ -36,13 +63,14 @@ async function createUser(userData, hashedPassword) {
 }
 
 async function updateUser(id, userData) {
-  const { userName, email, firstName, lastName } = userData;
+  const { userName, email, firstName, lastName, userRoleId } = userData;
   await db.Users.update(
     {
       UserName: userName,
       Email: email,
       FirstName: firstName,
       LastName: lastName,
+      UserRoleId: userRoleId,
       updatedAt: new Date(),
     },
     {

@@ -198,6 +198,172 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "User Role",
+			"item": [
+				{
+					"name": "GetAllUserRoles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxMTQxNjgsImV4cCI6MTc0NzExNzc2OH0.KqW1tuWgQiZMCmspelMYCb8fCSRakmZXBZHEM000f5g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/getAllUserRoles",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"getAllUserRoles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserRoleById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxMTQxNjgsImV4cCI6MTc0NzExNzc2OH0.KqW1tuWgQiZMCmspelMYCb8fCSRakmZXBZHEM000f5g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/getUserRoleById?id=8afc56c1-8475-486e-960b-907283205bbf",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"getUserRoleById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8afc56c1-8475-486e-960b-907283205bbf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxMTQxNjgsImV4cCI6MTc0NzExNzc2OH0.KqW1tuWgQiZMCmspelMYCb8fCSRakmZXBZHEM000f5g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Admin\",\r\n    \"description\": \"Level tertingi dalam aplikasi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/api/v1/createUserRole",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"createUserRole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Role",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxMTQxNjgsImV4cCI6MTc0NzExNzc2OH0.KqW1tuWgQiZMCmspelMYCb8fCSRakmZXBZHEM000f5g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/deleteUserRole?id=8afc56c1-8475-486e-960b-907283205bbf",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"deleteUserRole"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8afc56c1-8475-486e-960b-907283205bbf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Role",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxMTQxNjgsImV4cCI6MTc0NzExNzc2OH0.KqW1tuWgQiZMCmspelMYCb8fCSRakmZXBZHEM000f5g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Admin\",\r\n    \"description\": \"Tahta tertingi dalam aplikasi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/api/v1/updateUserRole?id=8afc56c1-8475-486e-960b-907283205bbf",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"updateUserRole"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8afc56c1-8475-486e-960b-907283205bbf"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

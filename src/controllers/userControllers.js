@@ -42,7 +42,7 @@ async function updateUser(req, res) {
       logger.info("User updated successfully", { updatedUser });
       res
         .status(200)
-        .json({ user: updatedUser, message: "User updated successfully" });
+        .json({ data: updatedUser, message: "User updated successfully" });
     } else {
       logger.warn("User not found for update", { id: req.query.id });
       res.status(404).json({ message: "User not found" });

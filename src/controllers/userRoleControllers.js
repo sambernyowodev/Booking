@@ -12,7 +12,7 @@ async function getAllUserRoles(req, res) {
     }
 
     logger.info("Retrieved all user roles", { userRoles });
-    res.status(200).json(userRoles);
+    res.status(200).json({ data: userRoles});
   } catch (err) {
     logger.error("Failed to retrieve user roles", err);
     res.status(500).json({ error: "Failed to retrieve user roles" });
@@ -24,7 +24,7 @@ async function getUserRoleById(req, res) {
     const userRole = await userRoleService.getUserRoleById(req.query.id);
     if (userRole) {
       logger.info("Retrieved user role", { userRole });
-      res.status(200).json(userRole);
+      res.status(200).json({ data: userRole});
     } else {
       logger.warn("User role not found", { id: req.query.id });
       res.status(404).json({ message: "User role not found" });

@@ -12,7 +12,7 @@ async function getAllUsers(req, res) {
     }
 
     logger.info("Retrieved all users", { users });
-    res.status(200).json(users);
+    res.status(200).json({ data: users});
   } catch (err) {
     logger.error("Failed to retrieve users", err);
     res.status(500).json({ error: "Failed to retrieve users" });
@@ -24,7 +24,7 @@ async function getUserById(req, res) {
     const user = await userService.getUserById(req.query.id);
     if (user) {
       logger.info("Retrieved user", { user });
-      res.status(200).json(user);
+      res.status(200).json({ data: user});
     } else {
       logger.warn("User not found", { id: req.query.id });
       res.status(404).json({ message: "User not found" });

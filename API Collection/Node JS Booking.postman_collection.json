@@ -77,19 +77,20 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDY4MDQyNDYsImV4cCI6MTc0NjgwNzg0Nn0.U0a6porB_TfUpLl4PwB7-g2lfJXmOnGydIES4GL5npM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxMTQxNjgsImV4cCI6MTc0NzExNzc2OH0.KqW1tuWgQiZMCmspelMYCb8fCSRakmZXBZHEM000f5g",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{localURL}}/api/v1/getAllUsers",
+							"raw": "{{localURL}}/api/v1/user/getAll",
 							"host": [
 								"{{localURL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"getAllUsers"
+								"user",
+								"getAll"
 							]
 						}
 					},
@@ -102,19 +103,20 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDY4MDQyNDYsImV4cCI6MTc0NjgwNzg0Nn0.U0a6porB_TfUpLl4PwB7-g2lfJXmOnGydIES4GL5npM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTRmMTI1Ny1mNjM2LTQ3ODAtYTVjNS0xMzEzOTFmNDIyMmQiLCJpYXQiOjE3NDcxMTQxNjgsImV4cCI6MTc0NzExNzc2OH0.KqW1tuWgQiZMCmspelMYCb8fCSRakmZXBZHEM000f5g",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{localURL}}/api/v1/getUserById?id=f14f1257-f636-4780-a5c5-131391f4222d",
+							"raw": "{{localURL}}/api/v1/user/getById?id=f14f1257-f636-4780-a5c5-131391f4222d",
 							"host": [
 								"{{localURL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"getUserById"
+								"user",
+								"getById"
 							],
 							"query": [
 								{
@@ -138,14 +140,15 @@
 							}
 						],
 						"url": {
-							"raw": "{{localURL}}/api/v1/deleteUser?id=1e8861e7-3d11-4aad-ab1c-5cc841ad7230",
+							"raw": "{{localURL}}/api/v1/user/delete?id=1e8861e7-3d11-4aad-ab1c-5cc841ad7230",
 							"host": [
 								"{{localURL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"deleteUser"
+								"user",
+								"delete"
 							],
 							"query": [
 								{
@@ -178,14 +181,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{localURL}}/api/v1/updateUser?id=f14f1257-f636-4780-a5c5-131391f4222d",
+							"raw": "{{localURL}}/api/v1/user/update?id=f14f1257-f636-4780-a5c5-131391f4222d",
 							"host": [
 								"{{localURL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"updateUser"
+								"user",
+								"update"
 							],
 							"query": [
 								{
@@ -214,14 +218,15 @@
 							}
 						],
 						"url": {
-							"raw": "{{localURL}}/api/v1/getAllUserRoles",
+							"raw": "{{localURL}}/api/v1/role/getAll",
 							"host": [
 								"{{localURL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"getAllUserRoles"
+								"role",
+								"getAll"
 							]
 						}
 					},
@@ -239,19 +244,20 @@
 							}
 						],
 						"url": {
-							"raw": "{{localURL}}/api/v1/getUserRoleById?id=8afc56c1-8475-486e-960b-907283205bbf",
+							"raw": "{{localURL}}/api/v1/role/getById?id=7c6351ac-332d-4706-ad0d-5fa1390b0424",
 							"host": [
 								"{{localURL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"getUserRoleById"
+								"role",
+								"getById"
 							],
 							"query": [
 								{
 									"key": "id",
-									"value": "8afc56c1-8475-486e-960b-907283205bbf"
+									"value": "7c6351ac-332d-4706-ad0d-5fa1390b0424"
 								}
 							]
 						}
@@ -279,14 +285,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{localURL}}/api/v1/createUserRole",
+							"raw": "{{localURL}}/api/v1/role/create",
 							"host": [
 								"{{localURL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"createUserRole"
+								"role",
+								"create"
 							]
 						}
 					},
@@ -304,14 +311,15 @@
 							}
 						],
 						"url": {
-							"raw": "{{localURL}}/api/v1/deleteUserRole?id=8afc56c1-8475-486e-960b-907283205bbf",
+							"raw": "{{localURL}}/api/v1/role/delete?id=8afc56c1-8475-486e-960b-907283205bbf",
 							"host": [
 								"{{localURL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"deleteUserRole"
+								"role",
+								"delete"
 							],
 							"query": [
 								{
@@ -344,14 +352,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{localURL}}/api/v1/updateUserRole?id=8afc56c1-8475-486e-960b-907283205bbf",
+							"raw": "{{localURL}}/api/v1/role/update?id=8afc56c1-8475-486e-960b-907283205bbf",
 							"host": [
 								"{{localURL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"updateUserRole"
+								"role",
+								"update"
 							],
 							"query": [
 								{

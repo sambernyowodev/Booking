@@ -9,9 +9,9 @@ const {
 } = require("../controllers/userControllers");
 const { updateUserSchema } = require("../validation/userValidation");
 
-router.get("/getAllUsers", authenticate, getAllUsers);
-router.get("/getUserById", authenticate, getUserById);
-router.put("/updateUser", authenticate, updateUserSchema, updateUser);
-router.delete("/deleteUser", authenticate, deleteUser);
+router.get("/user/getAll", authenticate, getAllUsers);
+router.get("/user/getById", authenticate, getUserById);
+router.put("/user/update", authenticate, updateUserSchema, updateUser);
+router.delete("/user/delete", authenticate, deleteUser);
 
 module.exports = router;

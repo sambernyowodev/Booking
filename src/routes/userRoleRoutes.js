@@ -13,20 +13,20 @@ const {
   updateUserRoleSchema,
 } = require("../validation/userRoleValidation");
 
-router.get("/getAllUserRoles", authenticate, getAllUserRoles);
-router.get("/getUserRoleById", authenticate, getUserRoleById);
+router.get("/role/getAll", authenticate, getAllUserRoles);
+router.get("/role/getById", authenticate, getUserRoleById);
 router.post(
-  "/createUserRole",
+  "/role/create",
   authenticate,
   createUserRoleSchema,
   createUserRole
 );
 router.put(
-  "/updateUserRole",
+  "/role/update",
   authenticate,
   updateUserRoleSchema,
   updateUserRole
 );
-router.delete("/deleteUserRole", authenticate, deleteUserRole);
+router.delete("/role/delete", authenticate, deleteUserRole);
 
 module.exports = router;

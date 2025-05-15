@@ -18,11 +18,11 @@ async function getAll() {
         user.Email,
         user.FirstName,
         user.LastName,
-        new userRoleDTO(
-          user.UserRole.Id,
-          user.UserRole.Name,
-          user.UserRole.Description
-        )
+        {
+          id: user.UserRole.Id,
+          name: user.UserRole.Name,
+          description: user.UserRole.Description,
+        }
       )
   );
 }
@@ -36,11 +36,11 @@ async function getUserById(id) {
     user.Email,
     user.FirstName,
     user.LastName,
-    new userRoleDTO(
-      user.UserRole.Id,
-      user.UserRole.Name,
-      user.UserRole.Description
-    )
+    {
+      id: user.UserRole.Id,
+      name: user.UserRole.Name,
+      description: user.UserRole.Description,
+    }
   );
 }
 
@@ -59,7 +59,13 @@ async function createUser(userData, hashedPassword) {
   });
 
   // Create a DTO instance
-  return new userDTO(newUser.Id, newUser.UserName, newUser.Email, newUser.FirstName, newUser.LastName);
+  return new userDTO(
+    newUser.Id,
+    newUser.UserName,
+    newUser.Email,
+    newUser.FirstName,
+    newUser.LastName
+  );
 }
 
 async function updateUser(id, userData) {
